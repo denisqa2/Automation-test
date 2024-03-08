@@ -6,7 +6,6 @@ import static io.restassured.RestAssured.given;
 
 public class ApiTest {
 
-
     @Test
     public void createUserTest() {
         String endpoint = "https://petstore.swagger.io/v2/user";
