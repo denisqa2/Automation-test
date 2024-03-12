@@ -1,12 +1,10 @@
 package epam;
 
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 
 import java.util.concurrent.TimeUnit;
 
@@ -78,16 +76,56 @@ public class EpamTest {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(500, TimeUnit.SECONDS);
         epamPage.getSubmitFormButton().submit();
-//        epamPage.getRequiredLastName().sendKeys("a");
-//        epamPage.getRequiredEmail().sendKeys("a");
-//        epamPage.getRequiredPhone().sendKeys("a");
-        Assertions.assertEquals("This is a required field", epamPage.getRequiredFirstName().getText());
-
+        Assertions.assertTrue(epamPage.getRequiredFirstName().getAttribute("aria-invalid").contains("true"));
+        Assertions.assertTrue(epamPage.getRequiredLastName().getAttribute("aria-invalid").contains("true"));
+        Assertions.assertTrue(epamPage.getRequiredPhone().getAttribute("aria-invalid").contains("true"));
+        Assertions.assertTrue(epamPage.getRequiredEmail().getAttribute("aria-invalid").contains("true"));
     }
 
-    @AfterEach
-    public void tearDown(){
+    @ParameterizedTest
+    @ValueSource(strings = {"chrome", "firefox"})
+    public void logoTest(String browser) {
+        driver = DriverSingleton.getDriver(browser);
+        epamPage = new EpamPage(driver);
+        driver.get("https://www.epam.com/about");
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(500, TimeUnit.SECONDS);
+        epamPage.getTitle().click();
+        Assertions.assertEquals("https://www.epam.com/", driver.getCurrentUrl());
+    }
+
+//    @ParameterizedTest
+//    @ValueSource(strings = {"chrome", "firefox"})
+//    public void modeTest(String browser) {
+//        driver = DriverSingleton.getDriver(browser);
+//        epamPage = new EpamPage(driver);
+//        driver.get("https://www.epam.com");
+//        driver.manage().window().maximize();
+//        driver.manage().timeouts().implicitlyWait(500, TimeUnit.SECONDS);
+//        epamPage.getSwitcher().click();
+//        WebElement currentState = epamPage.getDarkModePage();
+//        if (currentState == epamPage.getDarkModePage()) {
+//            Assertions.assertTrue(epamPage.getLightModePage().isDisplayed());
+//        } else {
+//            Assertions.assertTrue(epamPage.getDarkModePage().isDisplayed());
+//        }
+//    }
+
+    @ParameterizedTest
+    @ValueSource(strings = {"chrome", "firefox"})
+    public void locationTest(String browser) {
+        driver = DriverSingleton.getDriver(browser);
+        epamPage = new EpamPage(driver);
+        driver.get("https://www.epam.com");
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(500, TimeUnit.SECONDS);
+        Assertions.assertNotNull(epamPage.getLocationAmericas().getAttribute("aria-selected"));
+        Assertions.assertNotNull(epamPage.getLocationEmea().getAttribute("aria-selected"));
+        Assertions.assertNotNull(epamPage.getLocationApac().getAttribute("aria-selected"));
+    }
+
+    @AfterAll
+    public static void tearDown(){
         driver.quit();
-        //driver = null;
     }
 }

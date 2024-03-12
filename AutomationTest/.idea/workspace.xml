@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="332b3a8f-2ae5-4c3a-8ea1-2526e1b4f7ae" name="Changes" comment="tests update">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/epam/DriverSingleton.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/epam/EpamPage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/epam/EpamTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/epam/EpamTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/epam/EpamTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2dPj1zINvRlQHxkreMqTkiRdofO" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Денис/IdeaProjects/SeleniumTaskFramework/src/test/java/org/example/test/ActionTest.java"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Денис\IdeaProjects\AutomationTest\AutomationTest\src\test\java\epam" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Денис\IdeaProjects\AutomationTest\AutomationTest\src\test\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.EpamTest">
+    <configuration name="EpamTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AutomationTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="epam.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="epam" />
+      <option name="MAIN_CLASS_NAME" value="epam.EpamTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EpamTest.locationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AutomationTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="epam.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="epam" />
+      <option name="MAIN_CLASS_NAME" value="epam.EpamTest" />
+      <option name="METHOD_NAME" value="locationTest(java.lang.String)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EpamTest.logoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AutomationTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="epam.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="epam" />
+      <option name="MAIN_CLASS_NAME" value="epam.EpamTest" />
+      <option name="METHOD_NAME" value="logoTest(java.lang.String)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EpamTest.modeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AutomationTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="epam.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="epam" />
+      <option name="MAIN_CLASS_NAME" value="epam.EpamTest" />
+      <option name="METHOD_NAME" value="modeTest(java.lang.String)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EpamTest.setUp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AutomationTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="epam.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="epam" />
+      <option name="MAIN_CLASS_NAME" value="epam.EpamTest" />
+      <option name="METHOD_NAME" value="setUp(java.lang.String)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.EpamTest" />
+        <item itemvalue="JUnit.EpamTest.locationTest" />
+        <item itemvalue="JUnit.EpamTest.modeTest" />
+        <item itemvalue="JUnit.EpamTest.logoTest" />
+        <item itemvalue="JUnit.EpamTest.setUp" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="332b3a8f-2ae5-4c3a-8ea1-2526e1b4f7ae" name="Changes" comment="" />
+      <created>1709916398114</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1709916398114</updated>
+    </task>
+    <task id="LOCAL-00001" summary="push1">
+      <option name="closed" value="true" />
+      <created>1710255958479</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1710255958480</updated>
+    </task>
+    <task id="LOCAL-00002" summary="gitignore update">
+      <option name="closed" value="true" />
+      <created>1710258368656</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1710258368656</updated>
+    </task>
+    <task id="LOCAL-00003" summary="gitignore update">
+      <option name="closed" value="true" />
+      <created>1710258552383</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1710258552383</updated>
+    </task>
+    <task id="LOCAL-00004" summary="tests update">
+      <option name="closed" value="true" />
+      <created>1710269857281</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1710269857282</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="push1" />
+    <MESSAGE value="gitignore update" />
+    <MESSAGE value="tests update" />
+    <option name="LAST_COMMIT_MESSAGE" value="tests update" />
+  </component>
+</project>
