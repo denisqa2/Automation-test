@@ -16,8 +16,13 @@ public class EpamPage {
     @FindBy(xpath = "//img[@class='header__logo header__logo-light']")
     private WebElement title;
 
-    @FindBy(xpath = "//div[@class='theme-switcher']")
+    @FindBy(xpath = "/html/body/div/div[2]/div[2]/div[1]/header/div/div/section/div")
     private WebElement switcher;
+    @FindBy(xpath = "//body[@class='fonts-loaded light-mode']")
+    private WebElement lightModePage;
+
+    @FindBy(xpath = "//body[@class='fonts-loaded dark-mode']")
+    private WebElement darkModePage;
 
     @FindBy(xpath = "/html/body/div[1]/div[2]/div[2]/div[1]/header/div/div/ul/li[2]/div/div/button/span")
     //"//span[@class='location-selector__button-language']"
@@ -73,8 +78,6 @@ public class EpamPage {
     @FindBy(xpath = "//h2[contains(text(), 'results for')]")
     private WebElement findResult;
 
-    @FindBy(xpath = "")
-    private WebElement requiredReason;
     @FindBy(xpath = "//input[@id='_content_epam_en_about_who-we-are_contact_jcr_content_content-container_section_section-par_form_constructor_user_first_name']")
     private WebElement requiredFirstName;
 
@@ -87,11 +90,11 @@ public class EpamPage {
     @FindBy(xpath = "//input[@id='_content_epam_en_about_who-we-are_contact_jcr_content_content-container_section_section-par_form_constructor_user_phone']")
     private WebElement requiredPhone;
 
-    @FindBy(xpath = "")
-    private WebElement requiredLocation;
-
     @FindBy(xpath = "//button[@class='button-ui'][text()='Submit']")
     private WebElement submitFormButton;
+
+    @FindBy(xpath = "//a[@href='https://www.epam.com/content/dam/epam/free_library/EPAM_Corporate_Overview_Q4_EOY.pdf']")
+    private WebElement atGlanceDownload;
 
     public WebElement getTitle() {
         return title;
@@ -99,6 +102,14 @@ public class EpamPage {
 
     public WebElement getSwitcher() {
         return switcher;
+    }
+
+    public WebElement getLightModePage() {
+        return lightModePage;
+    }
+
+    public WebElement getDarkModePage() {
+        return darkModePage;
     }
 
     public WebElement getSelectLanguage() {
@@ -169,10 +180,6 @@ public class EpamPage {
         return findResult;
     }
 
-    public WebElement getRequiredReason() {
-        return requiredReason;
-    }
-
     public WebElement getRequiredFirstName() {
         return requiredFirstName;
     }
@@ -189,11 +196,11 @@ public class EpamPage {
         return requiredPhone;
     }
 
-    public WebElement getRequiredLocation() {
-        return requiredLocation;
-    }
-
     public WebElement getSubmitFormButton() {
         return submitFormButton;
+    }
+
+    public WebElement getAtGlanceDownload() {
+        return atGlanceDownload;
     }
 }
