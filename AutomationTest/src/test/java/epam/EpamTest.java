@@ -6,12 +6,14 @@ import org.junit.jupiter.params.provider.ValueSource;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+
 import java.util.concurrent.TimeUnit;
 
 public class EpamTest {
 
     static EpamPage epamPage;
     static WebDriver driver;
+
 
     @ParameterizedTest
     @ValueSource(strings = {"chrome", "firefox"})
@@ -94,22 +96,22 @@ public class EpamTest {
         Assertions.assertEquals("https://www.epam.com/", driver.getCurrentUrl());
     }
 
-//    @ParameterizedTest
-//    @ValueSource(strings = {"chrome", "firefox"})
-//    public void modeTest(String browser) {
-//        driver = DriverSingleton.getDriver(browser);
-//        epamPage = new EpamPage(driver);
-//        driver.get("https://www.epam.com");
-//        driver.manage().window().maximize();
-//        driver.manage().timeouts().implicitlyWait(500, TimeUnit.SECONDS);
-//        epamPage.getSwitcher().click();
-//        WebElement currentState = epamPage.getDarkModePage();
-//        if (currentState == epamPage.getDarkModePage()) {
-//            Assertions.assertTrue(epamPage.getLightModePage().isDisplayed());
-//        } else {
-//            Assertions.assertTrue(epamPage.getDarkModePage().isDisplayed());
-//        }
-//    }
+    @ParameterizedTest
+    @ValueSource(strings = {"chrome", "firefox"})
+    public void modeTest(String browser) {
+        driver = DriverSingleton.getDriver(browser);
+        epamPage = new EpamPage(driver);
+        driver.get("https://www.epam.com");
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(500, TimeUnit.SECONDS);
+        epamPage.getSwitcher().click();
+        WebElement currentState = epamPage.getDarkModePage();
+        if (currentState == epamPage.getDarkModePage()) {
+            Assertions.assertTrue(epamPage.getLightModePage().isDisplayed());
+        } else {
+            Assertions.assertTrue(epamPage.getDarkModePage().isDisplayed());
+        }
+    }
 
     @ParameterizedTest
     @ValueSource(strings = {"chrome", "firefox"})
@@ -124,8 +126,8 @@ public class EpamTest {
         Assertions.assertNotNull(epamPage.getLocationApac().getAttribute("aria-selected"));
     }
 
-    @AfterAll
-    public static void tearDown(){
-        driver.quit();
+    @AfterEach
+    public void tearDown(){
+            driver.quit();
     }
 }
